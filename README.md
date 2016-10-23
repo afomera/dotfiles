@@ -3,7 +3,7 @@
 These are my dotfiles... WIP but trying to organize my files across
 multiple computers has finally frustrated me enough to fix this mess.
 
-### Software Used
+## Software Used
 **Editors**
 - [Atom](http://atom.io)
 - MacVim `brew install macvim`
@@ -17,6 +17,18 @@ multiple computers has finally frustrated me enough to fix this mess.
 **Package Management**
 - [Homebrew](http://brew.sh)
 
-### Installing
+## General Notes
+- Leader key for mvim defaults to \
+- Switching between panes/windows in macvim is Ctrl-w-w
+- Running shell commands in VIM - Esc (out of mode you're in to normal..)
+  :!(command) for example typing :!touch
+app/controllers/home_controller.rb will create a file like a normal
+touch command.
+- Selecting text and indenting: Enter visual mode (V) select the text
+  (you can press `jj` and it'll select three lines and you can then
+press > to indent or < to remove one set of indention.
+- Auto-indenting all text: `(V) - Cmd+A - =`
+
+## Installing
 
 Soon...
