@@ -29,6 +29,12 @@ touch command.
 press > to indent or < to remove one set of indention.
 - Auto-indenting all text: `(V) - Cmd+A - =`
 
-## Installing
+## Installing iTerm Theme
 
-Soon...
+1. Launch iTerm 2. Get the latest version at iterm2.com
+2. Type CMD+i (⌘+i)
+3. Navigate to Colors tab
+4. Click on Load Presets
+5. Click on Import
+6. Select the .itermcolors file(s) of the scheme(s) you'd like to use
+7. Click on Load Presets and choose a color scheme
