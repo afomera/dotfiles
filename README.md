@@ -11,6 +11,8 @@ multiple computers has finally frustrated me enough to fix this mess.
       Install script: `curl -L https://bit.ly/janus-bootstrap | bash`
 
 **Terminal**
+- [Hyper](https://hyper.is/)
+  - [Awesome Hyper](https://github.com/bnb/awesome-hyper)
 - [iTerm 2](https://www.iterm2.com/)
 - [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 
