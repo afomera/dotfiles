@@ -1,0 +1,4 @@
+# Put your local aliases here.
+# An example may be a shortcut to cd to a project folder
+
+alias projects="cd ~/Projects"

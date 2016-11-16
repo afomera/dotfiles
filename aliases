@@ -1,3 +1,6 @@
+# Load in any local aliases that may be machine dependent
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
 # windows habbits die hard
 alias cls=clear
 
