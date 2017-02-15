@@ -31,6 +31,12 @@ touch command.
 press > to indent or < to remove one set of indention.
 - Auto-indenting all text: `(V) - Cmd+A - =`
 
+## ZSH AutoSuggestions
+I occasionally use zsh-autosuggestions. I follow the instructions at:
+ https://github.com/zsh-users/zsh-autosuggestions
+
+ for the oh-my-zsh installation.
+
 ## Installing iTerm Theme
 
 1. Launch iTerm 2. Get the latest version at iterm2.com
