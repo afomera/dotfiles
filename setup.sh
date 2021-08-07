@@ -4,11 +4,11 @@
 # Other scripts will install more language specific software
 
 # Change these if you wish to change something
-export GIT_AUTHOR_NAME="Andrew Fomera"
-export GIT_AUTHOR_EMAIL="andrew@zerlex.net"
+export GIT_AUTHOR_NAME="Andrea Fomera"
+export GIT_AUTHOR_EMAIL="afomera@hey.com"
 
-export MAC_OS_NAME="andrewfomera-mpb"
-export MAC_OS_LABEL="Andrew Fomera - MPB"
+export MAC_OS_NAME="andreafomera-mpb"
+export MAC_OS_LABEL="Andrea Fomera - MPB"
 
 export SCREENSHOT_LOCATION="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Screenshots"
 

@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/andrew/.oh-my-zsh
+export ZSH=/Users/afomera/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -19,7 +19,7 @@ ZSH_THEME="excid3"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx ruby bundler brew rake) 
+plugins=(git osx ruby bundler brew rake)
 
 # User configuration
 
@@ -48,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh
 
 # Customize to your needs...
-#export PATH=/usr/local/bin:/Users/andrew/.rvm/gems/ruby-1.9.3-p125/bin:/Users/andrew/.rvm/gems/ruby-1.9.3-p125@global/bin:/Users/andrew/.rvm/rubies/ruby-1.9.3-p125/bin:/Users/andrew/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+#export PATH=/usr/local/bin:/Users/afomera/.rvm/gems/ruby-1.9.3-p125/bin:/Users/afomera/.rvm/gems/ruby-1.9.3-p125@global/bin:/Users/afomera/.rvm/rubies/ruby-1.9.3-p125/bin:/Users/afomera/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
