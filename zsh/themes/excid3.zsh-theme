@@ -8,10 +8,6 @@ function prompt_char {
     echo '○'
 }
 
-function battery_charge {
-    echo `$BAT_CHARGE` 2>/dev/null
-}
-
 function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
@@ -24,21 +20,26 @@ function virtualenv_info {
  patches: <patches|join( → )|pre_applied(%{$fg[yellow]%})|post_applied(%{$reset_color%})|pre_unapplied(%{$fg_bold[black]%})|post_unapplied(%{$reset_color%})>>" 2>/dev/null
  }
 
-function rbenv_ps1 {
-  rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
-  echo $rbenv_ruby_version
+
+function asdf_ps1 {
+  # asdf_ruby_version=`asdf current ruby | sed -e 's/ .*//'`
+  asdf_ruby_version=`asdf current ruby | sed 's/[^ ]* *//;s/ .*//;q'`
+  echo "ruby-$asdf_ruby_version"
 }
 
-# Uncomment if you are using RVM on Mac or Linux
+# Uncomment if you are using rbenv
 
-# function rvm_ps1 {
-# rvm_ps1=`rvm-prompt v`
-# echo $rvm_ps1
+# function rbenv_ps1 {
+#   rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
+#   echo $rbenv_ruby_version
 # }
 
-# PROMPT=' %(?,%F{green},%F{red})%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} using %{$fg[blue]%}$($rvm_ps1)%{$reset_color%} in %{$fg_bold[green]%}$(collapse_pwd)%{$reset_color%}$(hg_prompt_info)$(git_prompt_info) $(virtualenv_info)$(prompt_char) '
+# This one used to be main prompt
+#PROMPT='
+#%(?,%F{green},%F{red})%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} using %{$fg[blue]%}$(asdf_ps1)%{$reset_color%} in %{$fg_bold[green]%}$(collapse_pwd)%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)
+# $(virtualenv_info)$(prompt_char) '
 PROMPT='
-%(?,%F{green},%F{red})%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} using %{$fg[blue]%}$(rbenv_ps1)%{$reset_color%} in %{$fg_bold[green]%}$(collapse_pwd)%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)
+%(?,%F{green},%F{red})%n%{$reset_color%} using %{$fg[blue]%}$(asdf_ps1)%{$reset_color%} in %{$fg_bold[green]%}$(collapse_pwd)%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)
 $(virtualenv_info)$(prompt_char) '
 
 RPROMPT=''
