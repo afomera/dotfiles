@@ -15,7 +15,7 @@ multiple computers has finally frustrated me enough to fix this mess.
 - [iTerm 2](https://www.iterm2.com/)
 - [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 - Tmux - `brew install tmux`
-- Tumxinator - `brew install tumxinator`
+- Tmuxinator - `brew install tmuxinator`
 
 **Package Management**
 
