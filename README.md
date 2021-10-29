@@ -4,38 +4,29 @@ These are my dotfiles... WIP but trying to organize my files across
 multiple computers has finally frustrated me enough to fix this mess.
 
 ## Software Used
+
 **Editors**
-- [Atom](http://atom.io)
-- MacVim `brew install macvim`
-  - [Janus (plugins)](https://github.com/carlhuda/janus)
-      Install script: `curl -L https://bit.ly/janus-bootstrap | bash`
+
+- [Visual Studio Code](https://code.visualstudio.com)
+- Vim - Some basic configurations are currently added (Monokai theme)
 
 **Terminal**
-- [Hyper](https://hyper.is/)
-  - [Awesome Hyper](https://github.com/bnb/awesome-hyper)
+
 - [iTerm 2](https://www.iterm2.com/)
 - [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
+- Tmux - `brew install tmux`
+- Tumxinator - `brew install tumxinator`
 
 **Package Management**
+
 - [Homebrew](http://brew.sh)
 
-## General Notes
-- Leader key for mvim defaults to \
-- Switching between panes/windows in macvim is Ctrl-w-w
-- Running shell commands in VIM - Esc (out of mode you're in to normal..)
-  :!(command) for example typing :!touch
-app/controllers/home_controller.rb will create a file like a normal
-touch command.
-- Selecting text and indenting: Enter visual mode (V) select the text
-  (you can press `jj` and it'll select three lines and you can then
-press > to indent or < to remove one set of indention.
-- Auto-indenting all text: `(V) - Cmd+A - =`
-
 ## ZSH AutoSuggestions
-I occasionally use zsh-autosuggestions. I follow the instructions at:
- https://github.com/zsh-users/zsh-autosuggestions
 
- for the oh-my-zsh installation.
+I occasionally use zsh-autosuggestions. I follow the instructions at:
+https://github.com/zsh-users/zsh-autosuggestions
+
+for the oh-my-zsh installation.
 
 ## Installing iTerm Theme
 
