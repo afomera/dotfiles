@@ -7,8 +7,8 @@
 export GIT_AUTHOR_NAME="Andrea Fomera"
 export GIT_AUTHOR_EMAIL="afomera@hey.com"
 
-export MAC_OS_NAME="andreafomera-mpb"
-export MAC_OS_LABEL="Andrea Fomera - MPB"
+export MAC_OS_NAME="andreafomera"
+export MAC_OS_LABEL="andreafomera"
 
 export SCREENSHOT_LOCATION="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Screenshots"
 
@@ -68,6 +68,9 @@ echo "-------------------------------"
 echo "Installing dependencies via Homebrew"
 echo "-------------------------------"
 
+brew install tmux
+brew install tmuxinator
+brew install neovim
 brew install mas
 brew install imagemagick
 

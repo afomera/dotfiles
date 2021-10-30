@@ -9,6 +9,7 @@ multiple computers has finally frustrated me enough to fix this mess.
 
 - [Visual Studio Code](https://code.visualstudio.com)
 - Vim - Some basic configurations are currently added (Monokai theme)
+- Neovim - because why not have two vims?
 
 **Terminal**
 
@@ -37,3 +38,21 @@ for the oh-my-zsh installation.
 5. Click on Import
 6. Select the .itermcolors file(s) of the scheme(s) you'd like to use
 7. Click on Load Presets and choose a color scheme
+
+# vim-plug
+
+https://github.com/junegunn/vim-plug
+
+Installation for vim:
+
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Installation for neovim:
+
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```

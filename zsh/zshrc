@@ -29,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='mvim'
+   export EDITOR='nvim'
  fi
 
 # Compilation flags
@@ -50,8 +50,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 #export PATH=/usr/local/bin:/Users/afomera/.rvm/gems/ruby-1.9.3-p125/bin:/Users/afomera/.rvm/gems/ruby-1.9.3-p125@global/bin:/Users/afomera/.rvm/rubies/ruby-1.9.3-p125/bin:/Users/afomera/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init - zsh)"
 
 # Load in aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
