@@ -38,9 +38,11 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 " For Telescope keybindings (fuzzysearch)
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fk <cmd>Telescope grep_string<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>gb <cmd>Telescope git_branches<cr>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
@@ -71,6 +73,19 @@ set smarttab
 set expandtab		" spaces instead of tabs
 set scrolloff=3         " start scrolling 5 lines before edge of viewport
 
+set cmdheight=2	" set the height of the command line
+
 " Change the color of the editor after 120 chars, except for the quickfix panel.
 let &colorcolumn=join(range(121,999),",")
 au FileType qf setlocal nonumber colorcolumn=
+
+fun! TrimWhitespace()
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
+endfun
+
+augroup MISC
+  autocmd!
+  autocmd BufWritePre * :call TrimWhitespace()
+augroup END
