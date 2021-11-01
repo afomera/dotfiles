@@ -1,3 +1,7 @@
+set nocompatible
+
+let mapleader = " "
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -5,8 +9,26 @@ endif
 syntax enable
 colorscheme monokai
 
+" Folding
+set foldlevel=1
+set foldmethod=syntax
+
 " use the system clipboard
 set clipboard+=unnamedplus
+
+" Tab mappings
+map <Leader>tt :tabnew<cr>
+map <Leader>tn :tabnext<cr>
+map <Leader>tp :tabprevious<cr>
+
+" Test mappings
+nnoremap <silent> <Leader>t :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <Leader>gt :TestVisit<CR>
+tmap <C-o> <C-\><C-n>
+let test#strategy = "neovim"
 
 " NERDTree keybindings
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -19,6 +41,12 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " Turn mouse on
 set mouse=a
