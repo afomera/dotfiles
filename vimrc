@@ -10,8 +10,8 @@ syntax enable
 colorscheme monokai
 
 " Folding
-set foldlevel=1
-set foldmethod=syntax
+" set foldlevel=1
+" set foldmethod=syntax
 
 " use the system clipboard
 set clipboard+=unnamedplus
