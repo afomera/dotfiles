@@ -73,6 +73,8 @@ brew install tmuxinator
 brew install neovim
 brew install mas
 brew install imagemagick
+brew install ripgrep
+brew install fd
 
 echo "-------------------------------"
 echo "Setting up computer defaults"
