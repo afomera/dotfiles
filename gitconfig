@@ -1,0 +1,13 @@
+[color]
+  ui = true
+[core]
+  editor = nvim
+[user]
+  name = Andrea Fomera
+  email = afomera@hey.com
+[init]
+  defaultBranch = main
+[pull]
+  rebase = false
+[rebase]
+  autosquash = true
