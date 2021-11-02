@@ -6,6 +6,20 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead',
+      \ },
+      \ }
+
+" turn off -- INSERT mode -- etc text since we're using lightline
+set noshowmode
+
 syntax enable
 colorscheme monokai
 
@@ -60,7 +74,13 @@ set ruler		" show the cursor position all the time
 set number		" show line numbers
 set numberwidth=3	" width of the number gutter
 
+" Search settings
 set hls			" highlight search results
+set incsearch           " incremental search, search as characters are typed
+
+" turn off search highlighting with <CR> (carriage-return)
+nnoremap <CR> :nohlsearch<CR><CR>
+
 set splitbelow 		" open horizontal splits below
 set splitright		" open vertical splits to the right
 set nobackup
@@ -71,9 +91,15 @@ set autoindent		" always have automatic indenting on
 set shiftwidth=2
 set smarttab
 set expandtab		" spaces instead of tabs
-set scrolloff=3         " start scrolling 5 lines before edge of viewport
+set scrolloff=5         " start scrolling 5 lines before edge of viewport
 
 set cmdheight=2	" set the height of the command line
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 " Change the color of the editor after 120 chars, except for the quickfix panel.
 let &colorcolumn=join(range(121,999),",")
