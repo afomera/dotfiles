@@ -2,8 +2,8 @@
 export ZSH=/Users/afomera/.oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="excid3"
+# Look in ~/.oh-my-zsh/custom/themes/
+ZSH_THEME="afomera"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
