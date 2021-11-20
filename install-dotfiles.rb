@@ -64,6 +64,18 @@ def install_oh_my_zsh_themes
   end
 end
 
+def install_bin_functions
+  puts ""
+  puts "Installing .bin/ functions...".blue.bold
+  if File.exists?("#{HOME_DIR}/.bin/tat")
+    puts "---> .bin/tat already installed.".yellow
+  else
+    FileUtils.mkdir_p("#{HOME_DIR}/.bin")
+    FileUtils.cp("#{DOTFILES_SOURCE_PATH}/bin/tat", "#{HOME_DIR}/.bin")
+    puts "---> Installed .bin/tat".green
+  end
+end
+
 def install_ssh_config
   puts ""
   puts "Installing SSH Configuration...".blue.bold
@@ -116,6 +128,7 @@ if installing?
   puts ""
   divider
   install_oh_my_zsh_themes
+  install_bin_functions
   install_ssh_config
   install_vim_color_theme
   install_neovim_init_file
