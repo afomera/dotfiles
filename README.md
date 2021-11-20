@@ -1,22 +1,44 @@
 # .dotfiles
 
-Opinionated, and probably not the way you like 'em.
+Opinionated, and probably not the way you like 'em. But... if you do, have at it!
+
+- Homebrew
+- Vim uses vim-plug for packages
+- NeoVim (because GitHub Copilot), `vim` is aliased to `nvim` in the `.aliases` file, also uses ~/.vimrc configuration.
+- Tmuxinator (because easier to script opening multiple tmux windows/panes)
+- iTerm2
 
 ## Getting started
 
 **New Computer?**
 
-- Create `~/Projects` and git clone this repo into it. `git clone git@github.com:afomera/dotfiles.git`
+1. Clone this repo
 
-- Run `install-terminal-tools.sh`, it will install Homebrew, Oh my zsh, zsh-autosuggestions and ASDF along with the ruby and nodejs plugins.
+   ```
+   mkdir -p ~/Projects && cd ~/Projects && git clone git@github.com:afomera/dotfiles.git
+   ```
 
-Then, we can start customizing on top of that platform.
+2. Run the installation command for Terminal Tools
 
-- Run `install-dotfiles.rb` once Ruby is installed, and it'll sync the dotfiles with this repository, and install the static files (Vim theme, ssh config etc).
+   ```
+    ./install-terminal-tools.sh
+   ```
+
+   It will install Homebrew, Oh my zsh, zsh-autosuggestions and ASDF along with the ruby and nodejs plugins.
+
+3. Restart your Terminal, and install-dotfiles
+
+   ```
+     cd ~/Projects/dotfiles && ./install-dotfiles.rb
+   ```
+
+   This adds linked files to your local dotfiles clone, and will install the configuration files for NeoVim, SSH, tmux etc.
+
+   If you need to uninstall... run: `cd ~/Projects/dotfiles && ./install-dotfiles.rb uninstall`
 
 Then restart your Terminal and proceed to the next step!
 
-## Highlights
+## Highlights about what each file does
 
 **Oh my ZSH!**
 
@@ -55,15 +77,13 @@ _Requires Neovim_
 
 ---
 
-# Legacy readme
+# Legacy readme notes
 
 ## Software Used
 
 **Editors**
 
 - [Visual Studio Code](https://code.visualstudio.com)
-- Vim - Some basic configurations are currently added (Monokai theme)
-- Neovim - because why not have two vims?
 
 **Terminal**
 
@@ -71,10 +91,6 @@ _Requires Neovim_
 - [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 - Tmux - `brew install tmux`
 - Tmuxinator - `brew install tmuxinator`
-
-**Package Management**
-
-- [Homebrew](http://brew.sh)
 
 ## Installing iTerm Theme
 
@@ -85,21 +101,3 @@ _Requires Neovim_
 5. Click on Import
 6. Select the .itermcolors file(s) of the scheme(s) you'd like to use
 7. Click on Load Presets and choose a color scheme
-
-# vim-plug
-
-https://github.com/junegunn/vim-plug
-
-Installation for vim:
-
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-Installation for neovim:
-
-```
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-```
