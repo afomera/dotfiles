@@ -1,7 +1,55 @@
-## My dotfiles
+# .dotfiles
 
-These are my dotfiles... WIP but trying to organize my files across
-multiple computers has finally frustrated me enough to fix this mess.
+Opinionated, and probably not the way you like 'em.
+
+## Getting started
+
+**New Computer?**
+
+- Run `install-terminal-tools.sh`, it will install Homebrew, Oh my zsh, zsh-autosuggestions and ASDF along with the ruby and nodejs plugins.
+
+Then, we can start customizing on top of that platform.
+
+## Highlights
+
+**Oh my ZSH!**
+
+- ~/.zshrc default configuration with a change so the paths will work regardless of computer username
+- Also includes the code to pick up changes in the ~/.bin folder we make, and our ~/.aliases and ~/.env-vars files.
+
+**Vim**
+
+_Requires Neovim_
+
+- ~/.vimrc will auto-install vim-plug
+- ~/.vimrc/colors/monokai.vim -- theme for the monokai syntax highlighting.
+- plugins live in the ~/.vimrc.bundles file
+- Leader key has been re-mapped to <space>
+
+**Tmux**
+
+- ~/.tmux.conf - sets the tmux settings, still using the default cntrl+b keys.
+
+**Terminal**
+
+- ~/.hushlogin to quiet the iTerm2 login message
+- ~/.aliases.local is where we put system specific overrides (ie for work projects etc)
+- ~/.env-vars for putting ENVs we need for other things.
+
+**Rails/Ruby specific things**
+
+- ~/.gemrc will make it so we don't install documentation for rubygems
+- ~/.railsrc ensures we always use postgresql for our db for rails apps unless we specify different
+- ~/.irbrc helps tell us when we're in a safe Rails console session or if we're in production (not pry compatible)
+
+**Git**
+
+- ~/.gitconfig - for the usual git setups, as well as the name + email of Git author
+- ~/.gitmessage - for the default prompt for git commit messages
+
+---
+
+# Legacy readme
 
 ## Software Used
 
@@ -21,13 +69,6 @@ multiple computers has finally frustrated me enough to fix this mess.
 **Package Management**
 
 - [Homebrew](http://brew.sh)
-
-## ZSH AutoSuggestions
-
-I occasionally use zsh-autosuggestions. I follow the instructions at:
-https://github.com/zsh-users/zsh-autosuggestions
-
-for the oh-my-zsh installation.
 
 ## Installing iTerm Theme
 

@@ -1,5 +1,11 @@
 set nocompatible
 
+" Will install plugin manager if not detected
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+endif
+
 let mapleader = " "
 
 if filereadable(expand("~/.vimrc.bundles"))

@@ -1,7 +1,7 @@
 # Load in any local aliases that may be machine dependent
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
-# windows habbits die hard
+# windows habits die hard
 alias cls=clear
 
 # Git
@@ -20,3 +20,6 @@ alias dropdb="rails db:drop db:create db:migrate"
 
 # Vim
 alias vim="nvim $1"
+
+# M1 mac stuff
+alias x86="arch -x86_64"

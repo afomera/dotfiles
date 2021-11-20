@@ -1,0 +1,11 @@
+function install_asdf(){
+  # Pull in asdf
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+  bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+}
+
+function install_asdf_plugins(){
+  # Install asdf plugins
+  asdf plugin add ruby
+  asdf plugin-add nodejs
+}
