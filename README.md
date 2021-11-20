@@ -6,9 +6,15 @@ Opinionated, and probably not the way you like 'em.
 
 **New Computer?**
 
+- Create `~/Projects` and git clone this repo into it. `git clone git@github.com:afomera/dotfiles.git`
+
 - Run `install-terminal-tools.sh`, it will install Homebrew, Oh my zsh, zsh-autosuggestions and ASDF along with the ruby and nodejs plugins.
 
 Then, we can start customizing on top of that platform.
+
+- Run `install-dotfiles.rb` once Ruby is installed, and it'll sync the dotfiles with this repository, and install the static files (Vim theme, ssh config etc).
+
+Then restart your Terminal and proceed to the next step!
 
 ## Highlights
 
