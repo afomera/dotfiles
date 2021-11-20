@@ -1,10 +1,23 @@
 #!/bin/bash
 
 # Install xcode command line tools
-xcode-select --install
+if ! command -v xcode-select > /dev/null; then
+  printf "Installing Xcode CLI tools...\n"
+  xcode-select --install
+
+  printf "%s\n" "💡 ALT+TAB to view and accept Xcode license window."
+  read -p "Have you completed the Xcode CLI tools install (y/n)? " xcode_response
+  if [[ "$xcode_response" != "y" ]]; then
+    printf "ERROR: Xcode CLI tools must be installed before proceeding.\n"
+    exit 1
+  fi
+fi
 
 # Start things off with Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew > /dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  export PATH="/usr/local/bin:$PATH"
+fi
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
