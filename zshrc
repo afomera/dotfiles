@@ -1,5 +1,8 @@
+
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/afomera/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/custom/themes/
