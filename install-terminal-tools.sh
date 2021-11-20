@@ -38,5 +38,5 @@ asdf plugin add ruby
 asdf plugin-add nodejs
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
-# Install global asdf versions
+# Install local dependencies
 asdf install

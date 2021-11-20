@@ -21,7 +21,7 @@ Opinionated, and probably not the way you like 'em. But... if you do, have at it
 2. Run the installation command for Terminal Tools
 
    ```
-    ./install-terminal-tools.sh
+    cd ~/Projects/dotfiles && ./install-terminal-tools.sh
    ```
 
    It will install Homebrew, Oh my zsh, zsh-autosuggestions and ASDF along with the ruby and nodejs plugins.
