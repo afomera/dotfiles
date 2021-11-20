@@ -11,3 +11,5 @@
   rebase = false
 [rebase]
   autosquash = true
+[commit]
+  template = ~/.gitmessage

@@ -25,25 +25,6 @@ info() {
  printf "\033[00;34m$@\033[0m\n"
 }
 
-installFonts() {
-  info "Installing Fonts"
-
-   if [ "$(uname)" == "Darwin" ]; then
-        fonts="$HOME/Library/Fonts"
-    elif [ "$(uname)" == "Linux" ]; then
-        fonts=~/.fonts
-        mkdir -p "$fonts"
-    fi
-
-    find "$DOTFILES/fonts/" -name "*.[o,t]tf" -type f | while read -r file
-    do
-        cp -v "$file" "$fonts"
-    done
-}
-
-# Comment out installing fonts for now
-installFonts
-
 # Installs development requirements.
 if ! command -v xcode-select > /dev/null; then
   printf "Installing Xcode CLI tools...\n"

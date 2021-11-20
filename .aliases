@@ -17,3 +17,6 @@ alias bi="bundle install"
 alias bu="bundle update"
 alias be="bundle exec"
 alias dropdb="rails db:drop db:create db:migrate"
+
+# Vim
+alias vim="nvim $1"

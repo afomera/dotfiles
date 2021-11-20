@@ -55,3 +55,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Load in aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# Load in custom env vars
+[[ -f ~/.env-vars ]] && source ~/.env-vars
