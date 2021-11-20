@@ -23,7 +23,8 @@ LINK_OR_UNLINK = !ARGV[0].nil? ? ARGV[0] : "link"
 
 touchable_files = [
   'aliases.local',
-  'hushlogin'
+  'hushlogin',
+  'env-vars'
 ]
 
 linkable_root_level_files = [
@@ -36,7 +37,8 @@ linkable_root_level_files = [
   'tmux.conf',
   'vimrc',
   'vimrc.bundles',
-  'zshrc'
+  'zshrc',
+  'tool-versions'
 ]
 
 divider
@@ -57,16 +59,27 @@ divider
 
 puts ""
 divider
+puts "Installing SSH Configuration...".blue.bold
+if File.exists?("#{HOME_DIR}/.ssh/config")
+  puts "---> SSH Configuration already installed.".yellow
+else
+  FileUtils.mkdir_p("#{HOME_DIR}/.ssh")
+  FileUtils.cp("#{DOTFILES_SOURCE_PATH}/.ssh/config", "#{HOME_DIR}/.ssh")
+  puts "---> Installed SSH Default Config".green
+end
+divider
+
+puts ""
+divider
 puts "Installing VIM Color Theme...".blue.bold
 if File.exists?("#{HOME_DIR}/.vim/colors/monokai.vim")
   puts "---> Monokai Vim Color Theme already installed.".yellow
 else
   FileUtils.mkdir_p("#{HOME_DIR}/.vim/colors")
-  FileUtils.cp("#{DOTFILES_SOURCE_PATH}/vim/colors/monokai.vim", "#{HOME_DIR}/.vim/colors/")
+  FileUtils.cp("#{DOTFILES_SOURCE_PATH}/vim/colors/monokai.vim", "#{HOME_DIR}/.vim/colors")
   puts "---> Installed Monokai Vim Color Theme".green
 end
 divider
-
 
 puts ""
 divider
