@@ -57,6 +57,19 @@ touchable_files.each do |file|
 end
 divider
 
+
+puts ""
+divider
+puts "Installing Oh my ZSH Theme...".blue.bold
+if File.exists?("#{HOME_DIR}/.oh-my-zsh/custom/themes/afomera.zsh-theme")
+  puts "---> afomera.zsh-theme already installed.".yellow
+else
+  FileUtils.mkdir_p("#{HOME_DIR}/.oh-my-zsh/custom/themes")
+  FileUtils.cp("#{DOTFILES_SOURCE_PATH}/oh-my-zsh/custom/themes/afomera.zsh-theme", "#{HOME_DIR}/.oh-my-zsh/custom/themes")
+  puts "---> Installed afomera.zsh-theme".green
+end
+divider
+
 puts ""
 divider
 puts "Installing SSH Configuration...".blue.bold
