@@ -40,8 +40,8 @@ linkable_root_level_files = [
 ]
 
 divider
-puts "Welcome, #{USER}!"
-puts "Home directory: #{HOME_DIR}"
+puts "Welcome, #{USER}!".green
+puts "Home directory: #{HOME_DIR}".blue
 divider
 
 puts ""
@@ -56,7 +56,6 @@ end
 divider
 
 puts ""
-
 divider
 puts "Installing VIM Color Theme...".blue.bold
 if File.exists?("#{HOME_DIR}/.vim/colors/monokai.vim")
@@ -68,12 +67,18 @@ else
 end
 divider
 
-# puts "Bootstrapping directories we need..."
-# FileUtils.mkdir_p ["#{HOME_DIR}/.config/nvm", "#{HOME_DIR}/.vim/colors", "#{HOME_DIR}/.testing-test-test"]
-# divider
 
-# puts "Syncing dotfiles..."
-# divider
+puts ""
+divider
+puts "Installing neovim init...".blue.bold
+if File.exists?("#{HOME_DIR}/.config/nvim/init.vim")
+  puts "---> NeoVim configuration init script already installed...".yellow
+else
+  FileUtils.mkdir_p("#{HOME_DIR}/.config/nvim")
+  FileUtils.cp("#{DOTFILES_SOURCE_PATH}/.config/nvim/init.vim", "#{HOME_DIR}/.config/nvim")
+  puts "---> Installed NeoVim configuration init script".green
+end
+divider
 
 if LINK_OR_UNLINK == "link"
   puts ""
