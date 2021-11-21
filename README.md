@@ -26,7 +26,15 @@ Opinionated, and probably not the way you like 'em. But... if you do, have at it
 
    It will install Homebrew, Oh my zsh, zsh-autosuggestions and ASDF along with the ruby and nodejs plugins.
 
-3. Restart your Terminal, and install-dotfiles
+3. Install main dependencies
+
+   ```
+     cd ~/Projects/dotfiles && ./install-dependencies.sh
+   ```
+
+   Installs a number of homebrew packages, but avoids installing redis or postgres.
+
+4. Restart your Terminal, and install-dotfiles
 
    ```
      cd ~/Projects/dotfiles && ./install-dotfiles.rb
@@ -36,7 +44,7 @@ Opinionated, and probably not the way you like 'em. But... if you do, have at it
 
    If you need to uninstall... run: `cd ~/Projects/dotfiles && ./install-dotfiles.rb uninstall`
 
-Then restart your Terminal and proceed to the next step!
+Then restart your Terminal and you're off to install your packages from your specific projects.
 
 ## Highlights about what each file does
 
