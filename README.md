@@ -75,11 +75,7 @@ _Requires Neovim_
 - ~/.gitconfig - for the usual git setups, as well as the name + email of Git author
 - ~/.gitmessage - for the default prompt for git commit messages
 
----
-
-# Legacy readme notes
-
-## Software Used
+## Additional Software Used (install manually!)
 
 **Editors**
 
@@ -88,9 +84,6 @@ _Requires Neovim_
 **Terminal**
 
 - [iTerm 2](https://www.iterm2.com/)
-- [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
-- Tmux - `brew install tmux`
-- Tmuxinator - `brew install tmuxinator`
 
 ## Installing iTerm Theme
 
