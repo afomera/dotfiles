@@ -46,6 +46,12 @@ Opinionated, and probably not the way you like 'em. But... if you do, have at it
 
 Then restart your Terminal and you're off to install your packages from your specific projects.
 
+**Quitting your job? Going to live on a farm instead of coding?**
+
+```
+  cd ~/Projects/dotfiles && ./install-dotfiles.rb uninstall
+```
+
 ## Highlights about what each file does
 
 **Oh my ZSH!**
