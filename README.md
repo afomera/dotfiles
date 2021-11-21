@@ -52,7 +52,7 @@ _Requires Neovim_
 - ~/.vimrc will auto-install vim-plug
 - ~/.vimrc/colors/monokai.vim -- theme for the monokai syntax highlighting.
 - plugins live in the ~/.vimrc.bundles file
-- Leader key has been re-mapped to <space>
+- Leader key has been re-mapped to the `space` button
 
 **Tmux**
 
