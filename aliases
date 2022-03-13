@@ -13,6 +13,7 @@ alias gitclean="git branch --merged | egrep -v \"(^\*|master|develop|main)\" | x
 
 # Laravel
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias art="php artisan"
 
 # Ruby / Rails Helpers
 alias fs="foreman start -f Procfile.dev"
