@@ -13,3 +13,5 @@
   autosquash = true
 [commit]
   template = ~/.gitmessage
+[push]
+  autoSetupRemote = true
