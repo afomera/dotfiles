@@ -7,8 +7,8 @@
 export GIT_AUTHOR_NAME="Andrea Fomera"
 export GIT_AUTHOR_EMAIL="afomera@hey.com"
 
-export MAC_OS_NAME="andreafomera"
-export MAC_OS_LABEL="andreafomera"
+export MAC_OS_NAME="afomera"
+export MAC_OS_LABEL="afomera-mbp"
 
 export SCREENSHOT_LOCATION="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Screenshots"
 
