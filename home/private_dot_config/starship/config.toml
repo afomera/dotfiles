@@ -17,6 +17,7 @@ format = "[$user]($style) in "
 [directory]
 style = "bold green"
 truncation_length = 0
+truncate_to_repo = false
 format = "[$path]($style)[$read_only]($read_only_style)"
 
 [git_branch]
