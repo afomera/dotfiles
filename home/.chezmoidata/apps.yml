@@ -8,3 +8,9 @@ dmg_apps:
   - name: GitChime
     url: "https://updates.gitchime.com/releases/GitChime-Installer-Latest.dmg"
     app_name: "GitChime.app"
+  - name: Conductor
+    url: "https://cdn.crabnebula.app/download/melty/conductor/latest/platform/dmg-aarch64"
+    app_name: "Conductor.app"
+  - name: Codex
+    url: "https://persistent.oaistatic.com/codex-app-prod/Codex.dmg"
+    app_name: "Codex.app"

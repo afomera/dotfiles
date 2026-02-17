@@ -21,7 +21,7 @@ This will:
 
 **File sync** — all configs from `home/` are applied to `~`
 
-**After scripts** — `brew bundle` (installs all packages), VS Code extensions, macOS defaults, direnv allow
+**After scripts** — `brew bundle` (installs all packages), VS Code extensions, macOS defaults, direnv allow, DMG app installs (Taddly, RubyEnv, GitChime, Conductor, Codex)
 
 ## How it works
 
@@ -76,4 +76,4 @@ brew install --cask docker
 mas install 441258766  # Magnet
 ```
 
-Other apps to install manually: Expandly.app, Conductor.build, Codex App
+Other apps to install manually: Expandly.app
