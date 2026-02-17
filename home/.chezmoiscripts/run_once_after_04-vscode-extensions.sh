@@ -4,10 +4,14 @@ set -e
 # Detect VS Code or Cursor CLI
 if command -v code >/dev/null 2>&1; then
   CODE_CMD="code"
+elif [ -x "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" ]; then
+  CODE_CMD="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
 elif command -v cursor >/dev/null 2>&1; then
   CODE_CMD="cursor"
+elif [ -x "/Applications/Cursor.app/Contents/Resources/app/bin/cursor" ]; then
+  CODE_CMD="/Applications/Cursor.app/Contents/Resources/app/bin/cursor"
 else
-  echo "Neither 'code' nor 'cursor' CLI found, skipping VS Code extensions"
+  echo "Neither VS Code nor Cursor found, skipping extensions"
   exit 0
 fi
 

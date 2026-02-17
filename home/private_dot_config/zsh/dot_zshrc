@@ -4,7 +4,7 @@
 # This prevents third-party tools (raycast, zed, mise, etc.) from accidentally
 # having their .sh/.zsh files sourced as shell config.
 typeset -U config_files
-config_files=(${HOME}/.config/{00-xdg,direnv,git,go,homebrew,node,postgres,ruby,rubyenv,rust,starship,system,zsh}/**/*.(sh|zsh)(N))
+config_files=(${HOME}/.config/{00-xdg,direnv,git,go,homebrew,node,postgres,ruby,rubyenv,rust,starship,system,vscode,zsh}/**/*.(sh|zsh)(N))
 
 # Exclude this file from being re-sourced
 config_files=(${config_files:#*/zsh/.zshrc})
