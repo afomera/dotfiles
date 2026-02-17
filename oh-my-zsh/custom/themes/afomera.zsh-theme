@@ -8,7 +8,7 @@ function virtualenv_info {
 }
 
 PROMPT='
-%(?,%F{green},%F{red})%n%{$reset_color%} using %{$fg[blue]%}rubyenv%{$reset_color%} in %{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info)
+%(?,%F{green},%F{red})%n%{$reset_color%} in %{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info)
 $(virtualenv_info)$(prompt_char) '
 
 RPROMPT=''
