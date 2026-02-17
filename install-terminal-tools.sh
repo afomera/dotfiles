@@ -16,7 +16,7 @@ fi
 # Start things off with Homebrew
 if ! command -v brew > /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  export PATH="/usr/local/bin:$PATH"
+  export PATH="/opt/homebrew/bin:$PATH"
 fi
 
 # Check for Oh My Zsh and install if we don't have it

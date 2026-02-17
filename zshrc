@@ -1,6 +1,7 @@
 #export PAGER="most"
 export TERM="xterm-256color"
 
+export PATH="/opt/homebrew/bin:$PATH"
 # Allow us to load in from our home/.bin folder for custom scripts
 export PATH="$HOME/.bin:$PATH"
 
@@ -11,6 +12,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/custom/themes/
 ZSH_THEME="afomera"
 
+export RUBY_YJIT_ENABLE=1
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -74,3 +76,6 @@ function gitwork() {
 
   echo "Copied list of PRs to clipboard"
 }
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH=$HOME/go/bin:$PATH
+export GOPATH=$HOME/gopath
