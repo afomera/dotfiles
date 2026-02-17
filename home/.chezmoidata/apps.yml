@@ -1,0 +1,10 @@
+dmg_apps:
+  - name: Taddly
+    url: "https://taddly.app/releases/Taddly.dmg"
+    app_name: "Taddly.app"
+  - name: RubyEnv
+    url: "https://updates.rubyenv.app/releases/RubyEnv-Installer-Latest.dmg"
+    app_name: "RubyEnv.app"
+  - name: GitChime
+    url: "https://updates.gitchime.com/releases/GitChime-Installer-Latest.dmg"
+    app_name: "GitChime.app"
