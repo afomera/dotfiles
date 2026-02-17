@@ -1,0 +1,60 @@
+# CLI tools
+brew "mas"
+brew "starship"
+brew "neovim"
+brew "tmux"
+brew "tmuxinator"
+brew "gh"
+brew "git-delta"
+brew "bat"
+brew "ripgrep"
+brew "jq"
+brew "direnv"
+brew "ffmpeg"
+brew "imagemagick"
+brew "libvips"
+brew "sqlite"
+brew "go"
+brew "golangci-lint"
+brew "awscli"
+brew "ansible"
+brew "terraform"
+brew "caddy"
+brew "cloudflared"
+brew "tree"
+brew "lsd"
+brew "fnm"
+brew "rv"
+brew "heroku"
+
+# Cask apps
+cask "ghostty"
+cask "visual-studio-code"
+cask "1password"
+cask "1password-cli"
+cask "postgres-unofficial"
+cask "tableplus"
+cask "google-chrome"
+cask "raycast"
+cask "cleanshot"
+cask "claude"
+cask "claude-code"
+cask "slack"
+
+{{ if eq .profile "work" -}}
+# Work-only apps
+{{ end -}}
+
+# Manual installs (not in Homebrew):
+# - RubyEnv.app
+# - Taddly.app
+# - GitChime.com
+# - Expandly.app
+# - Conductor.build
+# - Codex App
+# - Codex CLI
+#
+# TODO: Install manually (require sudo or App Store sign-in):
+# - brew install --cask zoom
+# - brew install --cask docker
+# - mas install 441258766  # Magnet (requires App Store sign-in)

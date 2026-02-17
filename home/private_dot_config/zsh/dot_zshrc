@@ -1,0 +1,26 @@
+#!/usr/bin/env zsh
+
+# Auto-discover config files from ONLY the directories we manage (allowlist).
+# This prevents third-party tools (raycast, zed, mise, etc.) from accidentally
+# having their .sh/.zsh files sourced as shell config.
+typeset -U config_files
+config_files=(${HOME}/.config/{00-xdg,direnv,git,go,homebrew,node,postgres,ruby,rubyenv,rust,starship,system,vscode,zsh}/**/*.(sh|zsh)(N))
+
+# Exclude this file from being re-sourced
+config_files=(${config_files:#*/zsh/.zshrc})
+
+# Load env.sh files first (00-xdg sorts first, setting XDG_* vars before others need them)
+for file in ${(M)config_files:#*/env.sh}; do source $file; done
+
+# Load everything except env.sh and completion.zsh
+for file in ${${config_files:#*/env.sh}:#*/completion.zsh}; do source $file; done
+
+# Add completion dirs to fpath, then init compinit
+for file in ${(M)config_files:#*/completion.zsh}; do fpath=(${file:h} $fpath); done
+autoload -Uz compinit
+compinit
+
+# Source completions after compinit
+for file in ${(M)config_files:#*/completion.zsh}; do source $file; done
+
+unset config_files

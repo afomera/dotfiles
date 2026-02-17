@@ -1,0 +1,10 @@
+fonts:
+  nerd_fonts:
+    - name: IBMPlexMono
+      file: IBMPlexMono.tar.xz
+    - name: FiraCode
+      file: FiraCode.tar.xz
+    - name: JetBrainsMono
+      file: JetBrainsMono.tar.xz
+    - name: Monaspace
+      file: Monaspace.tar.xz

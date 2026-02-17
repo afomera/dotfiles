@@ -1,0 +1,5 @@
+# Global environment variables loaded by direnv.
+# This file is created once by chezmoi and never overwritten.
+# Add machine-local secrets and env vars here — they stay untracked.
+#
+# After first creation, run: direnv allow ~
