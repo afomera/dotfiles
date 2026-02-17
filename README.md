@@ -5,7 +5,7 @@ Managed with [chezmoi](https://www.chezmoi.io/). Modular zsh config with XDG bas
 ## New machine setup
 
 ```sh
-git clone https://github.com/afomera/dotfiles && cd dotfiles && ./install
+sh -c "$(curl -fsLS https://raw.githubusercontent.com/afomera/dotfiles/refs/heads/main/install)"
 ```
 
 This will:
@@ -76,4 +76,4 @@ brew install --cask docker
 mas install 441258766  # Magnet
 ```
 
-Other apps to install manually: RubyEnv.app, Taddly.app, GitChime.com, Expandly.app, Conductor.build, Codex App
+Other apps to install manually: Expandly.app, Conductor.build, Codex App
