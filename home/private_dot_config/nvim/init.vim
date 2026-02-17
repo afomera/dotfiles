@@ -2,6 +2,10 @@ set nocompatible
 let mapleader = " "
 
 syntax enable
+if has("termguicolors")
+  set termguicolors
+endif
+colorscheme github-dark
 set mouse=a
 set clipboard+=unnamedplus
 set number
