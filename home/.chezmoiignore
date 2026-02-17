@@ -1,0 +1,6 @@
+.DS_Store
+
+{{ if not .use_1password }}
+.ssh/id_ed25519
+.ssh/id_ed25519.pub
+{{ end }}

@@ -1,0 +1,46 @@
+[color]
+    ui = true
+
+[core]
+    editor = nvim
+    excludesfile = ~/.config/git/ignore
+    pager = delta
+
+[commit]
+    template = ~/.config/git/commit_template
+
+[delta]
+    dark = true
+    line-numbers = true
+    navigate = true
+
+[init]
+    defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = zdiff3
+
+[pager]
+    branch = false
+    tag = false
+
+[pull]
+    rebase = false
+
+[push]
+    autoSetupRemote = true
+
+[rebase]
+    autosquash = true
+
+[user]
+    name = {{ .fullName }}
+    email = {{ .email }}
+
+{{ if ne .work_org "none" -}}
+[url "git@work-github:{{ .work_org }}/"]
+    insteadOf = work:
+{{ end -}}

@@ -1,0 +1,13 @@
+Host *
+    AddKeysToAgent yes
+{{ if eq .chezmoi.os "darwin" }}    UseKeychain yes
+{{ end }}    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/id_ed25519
+
+{{ if ne .work_org "none" -}}
+Host work-github
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+{{ end -}}

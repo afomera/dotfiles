@@ -1,0 +1,16 @@
+{{- $fullName := promptStringOnce . "fullName" "What is your full name?" -}}
+{{- $email := promptStringOnce . "email" "What is your email address?" -}}
+{{- $profile := promptChoiceOnce . "profile" "Machine profile" (list "personal" "work") -}}
+{{- $workOrg := promptStringOnce . "work_org" "Work GitHub org name (or 'none' to skip)" -}}
+{{- $use1password := promptBoolOnce . "use_1password" "Use 1Password for SSH keys?" -}}
+
+[data]
+    fullName = {{ $fullName | quote }}
+    email = {{ $email | quote }}
+    profile = {{ $profile | quote }}
+    work_org = {{ $workOrg | quote }}
+    use_1password = {{ $use1password }}
+
+[git]
+    autoCommit = false
+    autoPush = false

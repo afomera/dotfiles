@@ -1,0 +1,32 @@
+[".local/share/zsh-autosuggestions"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-autosuggestions.git"
+    refreshPeriod = "168h"
+    private = true
+
+[".local/share/zsh-completions"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-completions.git"
+    refreshPeriod = "168h"
+    private = true
+
+[".local/share/zsh-syntax-highlighting"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    refreshPeriod = "168h"
+    private = true
+
+{{- $fontDir := "" }}
+{{- if eq .chezmoi.os "darwin" }}
+{{- $fontDir = "Library/Fonts" }}
+{{- else if eq .chezmoi.os "linux" }}
+{{- $fontDir = ".local/share/fonts" }}
+{{- end }}
+{{- range .fonts.nerd_fonts }}
+
+["{{ $fontDir }}/{{ .name }}"]
+    type = "archive"
+    url = {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" .file | quote }}
+    refreshPeriod = "168h"
+    extract = true
+{{- end }}

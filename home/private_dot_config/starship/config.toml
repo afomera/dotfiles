@@ -1,0 +1,54 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$line_break\
+$character"""
+
+right_format = "$ruby$nodejs$golang"
+
+[username]
+show_always = true
+style_user = "bright-purple"
+format = "[$user]($style) in "
+
+[directory]
+style = "bold green"
+truncation_length = 0
+format = "[$path]($style)[$read_only]($read_only_style)"
+
+[git_branch]
+format = " on [$branch]($style)"
+style = "red"
+
+[git_status]
+format = "[$modified$untracked]($style)"
+style = "green"
+modified = "!"
+untracked = "?"
+
+[character]
+success_symbol = "[±](bold)"
+error_symbol = "[±](bold red)"
+
+[hostname]
+ssh_only = true
+format = "[@$hostname]($style)"
+style = "yellow"
+
+[ruby]
+format = "[$symbol$version]($style) "
+style = "red"
+symbol = "rb "
+
+[nodejs]
+format = "[$symbol$version]($style) "
+style = "green"
+symbol = "node "
+
+[golang]
+format = "[$symbol$version]($style) "
+style = "cyan"
+symbol = "go "

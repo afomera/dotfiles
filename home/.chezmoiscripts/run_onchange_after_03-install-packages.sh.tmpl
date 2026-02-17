@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# Brewfile hash: {{ include "private_dot_config/homebrew/Brewfile.tmpl" | sha256sum }}
+if command -v brew > /dev/null; then
+  brew update
+  brew bundle --file="$HOME/.config/homebrew/Brewfile" || echo "Warning: some Brewfile dependencies failed to install"
+  brew upgrade || true
+  brew cleanup || true
+fi
