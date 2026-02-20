@@ -17,20 +17,16 @@ fi
 
 echo "==> Installing VS Code extensions via $CODE_CMD"
 
-extensions="
-Shopify.ruby-lsp
-Shopify.ruby-extensions-pack
-waderyan.gitblame
-GitHub.copilot-chat
-GitHub.github-vscode-theme
-herbcss.herb-lsp
-ybaumes.highlight-trailing-white-spaces
-yagudaev.run-specs
-marcoroth.stimulus-lsp
-tomoki1207.pdf
-CraigMaslowski.erb
-"
-
-for ext in $extensions; do
-  $CODE_CMD --install-extension "$ext" --force 2>/dev/null || true
-done
+$CODE_CMD \
+  --install-extension Shopify.ruby-lsp \
+  --install-extension Shopify.ruby-extensions-pack \
+  --install-extension waderyan.gitblame \
+  --install-extension GitHub.copilot-chat \
+  --install-extension GitHub.github-vscode-theme \
+  --install-extension herbcss.herb-lsp \
+  --install-extension ybaumes.highlight-trailing-white-spaces \
+  --install-extension yagudaev.run-specs \
+  --install-extension marcoroth.stimulus-lsp \
+  --install-extension tomoki1207.pdf \
+  --install-extension CraigMaslowski.erb \
+  --force 2>/dev/null || true

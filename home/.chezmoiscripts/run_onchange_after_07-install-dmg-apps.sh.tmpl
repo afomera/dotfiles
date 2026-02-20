@@ -20,7 +20,7 @@ install_dmg() {
 
   echo "==> Checking ${name}..."
 
-  if ! curl -L -s -f -o "$dmg_path" "$url"; then
+  if [ ! -f "$dmg_path" ]; then
     echo "    Failed to download ${name}, skipping"
     return
   fi
@@ -61,6 +61,14 @@ install_dmg() {
   rm -f "$dmg_path"
 }
 
+# Download all DMGs in parallel
+{{ range .dmg_apps -}}
+curl -L -s -f -o "/tmp/{{ .name }}.dmg" "{{ .url }}" &
+{{ end -}}
+echo "==> Downloading DMG apps in parallel..."
+wait
+
+# Install sequentially (mount/copy needs to be serial)
 {{ range .dmg_apps -}}
 install_dmg "{{ .name }}" "{{ .url }}" "{{ .app_name }}"
 {{ end -}}
