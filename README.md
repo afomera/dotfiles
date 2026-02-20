@@ -68,11 +68,11 @@ chezmoi cd             # cd into the source directory
 
 ## Manual installs
 
-These require sudo or App Store sign-in and aren't automated:
+These require sudo, App Store sign-in, or are deferred for faster initial setup:
 
 ```sh
-brew install --cask zoom
 brew install --cask docker
+brew install ansible terraform
 mas install 441258766  # Magnet
 ```
 
