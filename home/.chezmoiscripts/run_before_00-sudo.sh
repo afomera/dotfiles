@@ -13,5 +13,5 @@ fi
 # Keep sudo alive in a detached process that survives this script's exit.
 # Uses sudo -n (non-interactive) so it never prompts — just silently dies
 # when the timestamp eventually expires after chezmoi is long done.
-(while true; do sudo -n true; sleep 50; done) &!
+(while true; do sudo -n true 2>/dev/null; sleep 50; done) &>/dev/null &!
 echo $! > /tmp/.chezmoi-sudo-keepalive-pid
