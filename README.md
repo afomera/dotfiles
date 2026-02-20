@@ -77,3 +77,40 @@ mas install 441258766  # Magnet
 ```
 
 Other apps to install manually: Expandly.app
+
+## Post-install checklist
+
+Sign in to apps and services after setup completes:
+
+- [ ] **1Password** — sign in and enable Settings > Developer > "Connect with 1Password CLI"
+- [ ] **Google Chrome** — sign in to sync bookmarks/extensions
+- [ ] **Claude** — sign in to Anthropic account
+- [ ] **Codex** — sign in to OpenAI account
+- [ ] **Slack** — sign in to workspace(s)
+- [ ] **Zoom** — sign in
+- [ ] **Raycast** — sign in / import settings
+- [ ] **CleanShot** — activate license
+- [ ] **TablePlus** — activate license
+- [ ] **gh CLI** — `gh auth login`
+- [ ] **Heroku CLI** — `heroku login`
+- [ ] **AWS CLI** — `aws configure`
+- [ ] **App Store** — sign in, then `mas install 441258766` (Magnet)
+- [ ] **VS Code** — sign in for Settings Sync
+
+### SSH key setup (work machines)
+
+If not using 1Password for SSH, generate a key and add it to GitHub:
+
+```sh
+ssh-keygen -t ed25519 -C "your-email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+gh auth login          # authenticate the CLI
+gh ssh-key add ~/.ssh/id_ed25519.pub --title "Work Machine"
+```
+
+For work GitHub orgs, the dotfiles configure a `work-github` SSH host alias automatically (set during `chezmoi init`). Clone work repos with:
+
+```sh
+git clone work:repo-name
+```
