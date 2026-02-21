@@ -14,3 +14,6 @@ dmg_apps:
   - name: Codex
     url: "https://persistent.oaistatic.com/codex-app-prod/Codex.dmg"
     app_name: "Codex.app"
+  - name: Expandly
+    url: "https://updates.expandly.app/releases/Expandly-Installer-Latest.dmg"
+    app_name: "Expandly.app"
