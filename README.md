@@ -5,7 +5,7 @@ Managed with [chezmoi](https://www.chezmoi.io/). Modular zsh config with XDG bas
 ## New machine setup
 
 ```sh
-sh -c "$(curl -fsLS https://raw.githubusercontent.com/afomera/dotfiles/refs/heads/main/install)"
+curl -fsSL afomera.dev/setup.sh | sh
 ```
 
 This will:
