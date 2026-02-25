@@ -6,3 +6,7 @@
 
 [[ -f "$HOME/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
   source "$HOME/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Syntax highlighting theme (must be sourced after zsh-syntax-highlighting)
+[[ -f "${ZDOTDIR:-$HOME/.config/zsh}/theme.zsh" ]] && \
+  source "${ZDOTDIR:-$HOME/.config/zsh}/theme.zsh"
