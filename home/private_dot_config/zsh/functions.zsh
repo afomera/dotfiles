@@ -1,5 +1,19 @@
 #!/usr/bin/env zsh
 
+function kill_port() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: kill_port <port>"
+    return 1
+  fi
+  local pids=$(lsof -ti:"$1")
+  if [[ -z "$pids" ]]; then
+    echo "No process found on port $1"
+    return 1
+  fi
+  echo "$pids" | xargs kill -9
+  echo "Killed process(es) on port $1"
+}
+
 function gitwork() {
   local author="${1:-@me}"
   local daysAgo="${2:-7}"
