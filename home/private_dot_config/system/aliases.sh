@@ -6,3 +6,4 @@ alias vim=nvim
 alias ..="cd .."
 alias ...="cd ../.."
 alias projects="cd ~/Projects"
+alias cz=chezmoi
