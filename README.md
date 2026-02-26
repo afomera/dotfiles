@@ -96,6 +96,7 @@ Sign in to apps and services after setup completes:
 - [ ] **AWS CLI** — `aws configure`
 - [ ] **App Store** — sign in, then `mas install 441258766` (Magnet)
 - [ ] **VS Code** — sign in for Settings Sync
+- [ ] **Hotwire Dev Tools** — [Chrome](https://chromewebstore.google.com/detail/hotwire-dev-tools/phdobjkbablgffmmgnjbmfbbofnbkajc) · [Safari](https://apps.apple.com/app/hotwire-dev-tools/id6503706225) (`mas install 6503706225`)
 
 ### SSH key setup (work machines)
 
