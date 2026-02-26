@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for org in AthensMC rubyway-net coralframework applocale RailsBuddy LearnRails-dev Wicked-Customer forked-sh LearnHanakai byteui-dev flagstack-dev SproutPanel)",
+      "Bash(do)",
+      "Bash(echo:*)",
+      "Bash(gh api graphql:*)",
+      "Bash(done)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:developers.cloudflare.com)",
+      "WebFetch(domain:mcpcat.io)",
+      "WebFetch(domain:modelcontextprotocol.info)"
+    ]
+  }
+}
