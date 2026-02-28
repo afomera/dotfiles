@@ -33,19 +33,24 @@ brew "git-gtr"
 # Cask apps
 cask "ghostty"
 cask "visual-studio-code"
-cask "1password"
-cask "1password-cli"
 cask "postgres-unofficial"
 cask "tableplus"
-cask "google-chrome"
 cask "raycast"
 cask "cleanshot"
 cask "claude"
 cask "claude-code"
-cask "slack"
 
 {{ if eq .profile "work" -}}
 # Work-only apps
+{{ end -}}
+
+{{ if eq .profile "personal" -}}
+# Personal-only apps (work auto-installs these)
+cask "google-chrome"
+cask "1password"
+cask "1password-cli"
+cask "slack"
+cask "zoom"
 {{ end -}}
 
 # Manual installs (not in Homebrew):
@@ -57,7 +62,6 @@ cask "slack"
 # - Codex App
 # - Codex CLI
 #
-cask "zoom"
 # cask "docker"
 
 # TODO: Install manually (requires App Store sign-in):
