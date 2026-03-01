@@ -8,7 +8,7 @@ apply_dotfiles() {
 }
 
 install_1password() {
-  if [ -d "/Applications/1Password.app" ] || brew list --cask 1password >/dev/null 2>&1; then
+  if [ -d "/Applications/1Password.app" ] || [ -d "$HOME/Applications/1Password.app" ] || brew list --cask 1password >/dev/null 2>&1; then
     echo "==> 1Password already installed, skipping"
   else
     echo "==> Installing 1Password"
