@@ -41,6 +41,14 @@ install_chezmoi() {
   fi
 }
 
+install_packages() {
+  echo "==> Updating Homebrew"
+  brew update
+  echo "==> Installing Homebrew packages from Brewfile"
+  brew bundle --file="$HOME/.config/homebrew/Brewfile" || echo "Warning: some Brewfile dependencies failed to install"
+  brew cleanup || true
+}
+
 install_xcode_cli() {
   if ! xcode-select -p >/dev/null 2>&1; then
     echo "==> Installing Xcode CLI tools"
@@ -65,6 +73,7 @@ Darwin)
   install_1password
   install_chezmoi
   apply_dotfiles
+  install_packages
 
   echo "Setup Complete"
   echo "Open a new terminal to use your new shell config."
